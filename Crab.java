@@ -7,23 +7,44 @@ public class Crab extends Actor
 {
     public void act()
    {
-        if ( isAtEdge())
-        {
-            turn (17);
-        }
-        
-        if (Greenfoot.getRandomNumber(100)<10)
-        {
-            turn( Greenfoot.getRandomNumber(91)-45);
-        
-        }
-        
+        turnAtEdge();
+        lookingForWorm();
+        randomTurn();
         move(5);
-        if ( isTouching(Worm.class))
+    }
+     
+    /*
+     * the crabs eat the worms using this code
+     */
+    public  void lookingForWorm()
+    {
+        if (isTouching(Worm.class))
         {
             removeTouching(Worm.class);
         }
+ 
+   }
+   
+   /*
+    * Make the crab randomly turn left or right between 0-45 degrees
+    */
+   public void randomTurn()
+   {
+       if(Greenfoot.getRandomNumber(100)<10)
+       {
+           turn( Greenfoot.getRandomNumber(91)-45);
+           
+       }
     }
-}
-
+    
+    public void turnAtEdge()
+    {
+        if ( isAtEdge() )
+        {
+            turn(17);
+          
+        }
+        
+    }
+}   
 
