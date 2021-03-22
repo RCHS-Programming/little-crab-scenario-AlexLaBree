@@ -8,7 +8,12 @@ public class Crab extends Actor
     private GreenfootImage image1;
     private GreenfootImage image2;
     
-    publc void
+    public Crab()
+    {
+        image1=new GreenfootImage ("crab.png");
+        image2=new Greenfootimage ("crab2.png");
+    }
+    // methods ommitted
     public void act()
    {
           if (Greenfoot.isKeyDown("left"))
