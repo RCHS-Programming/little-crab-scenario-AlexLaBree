@@ -5,9 +5,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
  */
 public class Crab extends Actor
 {
+    private GreenfootImage image1;
+    private GreenfootImage image2;
+    
+    publc void
     public void act()
    {
-           if (Greenfoot.isKeyDown("left"))
+          if (Greenfoot.isKeyDown("left"))
         {
             turn (-4);
         }
