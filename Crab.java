@@ -34,12 +34,21 @@ public class Crab extends Actor
      */
     public  void lookingForWorm()
    {
-        if (isTouching(Worm.class))
-        {
+   if (isTouching(Worm.class))
+   {
             removeTouching(Worm.class);
             Greenfoot.playSound ("slurp.wav");
-        }
-   }
+            
+            wormsEaten = wormsEaten + 1;
+            
+            getWorld() .showText("score: " + wormsEaten, 50, 500);
+            
+     if(wormsEaten == 10 )
+     {
+        Greefoot.playSound( "fanfare.wav" );
+       }
+
+   
    
    public void checkKeyPress()
    { 
@@ -52,8 +61,23 @@ public class Crab extends Actor
         {
             turn (4);
         }       
-    }  
-}     
+    }
+    
+    //switch the images of the crab to anomate it
+   public void switchImage()
+   {
+       if(getImage()==image1)
+       {
+           setImage(image2);
+        }
+        else
+        {
+            setImage(image1);
+        }
+    }
+   }
+}    
+
   
   
 

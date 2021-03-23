@@ -10,4 +10,6 @@ comment3.target=void\ lookingForWorm()
 comment3.text=\r\n\ the\ crabs\ eat\ the\ worms\ using\ this\ code\r\n
 comment4.params=
 comment4.target=void\ checkKeyPress()
-numComments=5
+comment5.params=
+comment5.target=void\ switchImage()
+numComments=6
