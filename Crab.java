@@ -11,7 +11,7 @@ public class Crab extends Actor
     public Crab()
     {
         image1=new GreenfootImage ("crab.png");
-        image2=new Greenfootimage ("crab2.png");
+        image2=new GreenfootImage ("crab2.png");
     }
     // methods ommitted
     public void act()
